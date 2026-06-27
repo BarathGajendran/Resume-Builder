@@ -4,5 +4,6 @@ export const modules: ModuleMap = {
   "./components/mockups/resume-builder/Corporate.tsx": () => import("../components/mockups/resume-builder/Corporate.tsx"),
   "./components/mockups/resume-builder/Creative.tsx": () => import("../components/mockups/resume-builder/Creative.tsx"),
   "./components/mockups/resume-builder/Elegance.tsx": () => import("../components/mockups/resume-builder/Elegance.tsx"),
+  "./components/mockups/resume-builder/EleganceMobile.tsx": () => import("../components/mockups/resume-builder/EleganceMobile.tsx"),
   "./components/mockups/resume-builder/TechPro.tsx": () => import("../components/mockups/resume-builder/TechPro.tsx")
 };

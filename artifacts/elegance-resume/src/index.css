@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap');
+@import 'tailwindcss';
+
+/* ─── Font utilities ─────────────────────────────────────── */
+.font-serif-display { font-family: 'Playfair Display', Georgia, serif; }
+.font-serif-body    { font-family: 'Lora', Georgia, serif; }
+
+/* ─── Custom scrollbar ───────────────────────────────────── */
+.cscroll::-webkit-scrollbar       { width: 4px; }
+.cscroll::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.12); border-radius: 8px; }
+.cscroll::-webkit-scrollbar-track { background: transparent; }
+
+/* ─── Select option colors ───────────────────────────────── */
+select option { background: #fff; color: #333; }
+
+/* ─── Base ───────────────────────────────────────────────── */
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+/* ─── Print styles ───────────────────────────────────────── */
+@media print {
+  /* Hide the editor panel and preview background chrome */
+  .editor-panel { display: none !important; }
+
+  /* Reset the preview panel to fill the page */
+  .preview-panel {
+    position: fixed !important;
+    inset: 0 !important;
+    overflow: visible !important;
+    background: white !important;
+    padding: 0 !important;
+  }
+
+  /* The resume card itself: full width, no shadow */
+  .preview-panel > div {
+    max-width: 100% !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .no-print-layout {
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    overflow: visible !important;
+    height: auto !important;
+  }
+
+  html {
+    overflow: visible !important;
+    height: auto !important;
+  }
+}
