@@ -30,7 +30,7 @@ export function Auth({ onLoginSuccess }: AuthProps) {
       return;
     }
 
-    const apiBase = import.meta.env.VITE_API_URL || 'http://127.0.0.1:5000';
+    const apiBase = import.meta.env.VITE_API_URL || import.meta.env.VITE_API || 'http://127.0.0.1:5005';
     const url = isLogin 
       ? `${apiBase}/api/auth/login` 
       : `${apiBase}/api/auth/register`;
