@@ -60,7 +60,7 @@ export function Auth({ onLoginSuccess }: AuthProps) {
       onLoginSuccess(data.user);
     } catch (err) {
       console.error('Authentication connection error:', err);
-      setError('Cannot connect to the backend server. Make sure the API server is running on port 5000.');
+      setError(`Cannot connect to the backend server at ${apiBase}. Please verify the API server is running.`);
       setLoading(false);
     }
   };
