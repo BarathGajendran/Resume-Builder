@@ -1,7 +1,6 @@
 [build]
-  base = "web-app"
-  publish = "dist/public"
-  command = "npx pnpm --filter @workspace/web-app run build"
+  command = "npx pnpm run build"
+  publish = "web-app/dist/public"
 
 [[redirects]]
   from = "/*"
