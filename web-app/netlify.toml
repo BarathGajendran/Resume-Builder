@@ -1,0 +1,8 @@
+[build]
+  command = "npx pnpm --filter @workspace/web-app run build"
+  publish = "dist/public"
+
+[[redirects]]
+  from = "/*"
+  status = 200
+  to = "/index.html"
